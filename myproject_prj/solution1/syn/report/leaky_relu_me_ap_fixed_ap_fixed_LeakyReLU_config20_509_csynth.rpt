@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vivado HLS Report for 'leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config20_509'
+================================================================
+* Date:           Wed Jul 27 22:58:21 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 3.950 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2056|     2056| 10.280 us | 10.280 us |  2056|  2056|   none  |
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LeakyReLUActLoop  |     2054|     2054|         8|          1|          1|  2048|    yes   |
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     87|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      2|     215|      1|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     84|    -|
+|Register         |        0|      -|     217|     64|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      2|     432|    236|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------+-----------------------------------+---------+-------+-----+----+-----+
+    |                Instance               |               Module              | BRAM_18K| DSP48E|  FF | LUT| URAM|
+    +---------------------------------------+-----------------------------------+---------+-------+-----+----+-----+
+    |myproject_axi_mul_32s_14ns_46_5_1_U79  |myproject_axi_mul_32s_14ns_46_5_1  |        0|      2|  215|   1|    0|
+    +---------------------------------------+-----------------------------------+---------+-------+-----+----+-----+
+    |Total                                  |                                   |        0|      2|  215|   1|    0|
+    +---------------------------------------+-----------------------------------+---------+-------+-----+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_82_p2                        |     +    |      0|  0|  12|          12|           1|
+    |ap_block_state3_pp0_stage0_iter1  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state9_pp0_stage0_iter7  |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln1494_fu_97_p2              |   icmp   |      0|  0|  18|          32|           1|
+    |icmp_ln548_fu_76_p2               |   icmp   |      0|  0|  13|          12|          13|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state1                   |    or    |      0|  0|   2|           1|           1|
+    |res_V_V_din                       |  select  |      0|  0|  32|           1|          32|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   2|           2|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  87|          64|          54|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  21|          4|    1|          4|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter7  |   9|          2|    1|          2|
+    |data_V_V_blk_n           |   9|          2|    1|          2|
+    |i_0_reg_65               |   9|          2|   12|         24|
+    |real_start               |   9|          2|    1|          2|
+    |res_V_V_blk_n            |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  84|         18|   19|         40|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   3|   0|    3|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7  |   1|   0|    1|          0|
+    |i_0_reg_65               |  12|   0|   12|          0|
+    |icmp_ln1494_reg_143      |   1|   0|    1|          0|
+    |icmp_ln548_reg_122       |   1|   0|    1|          0|
+    |start_once_reg           |   1|   0|    1|          0|
+    |tmp_V_reg_131            |  32|   0|   32|          0|
+    |trunc_ln_reg_148         |  30|   0|   30|          0|
+    |icmp_ln548_reg_122       |  64|  32|    1|          0|
+    |tmp_V_reg_131            |  64|  32|   32|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 217|  64|  122|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------------------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |                      Source Object                     |    C Type    |
++------------------+-----+-----+------------+--------------------------------------------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|start_full_n      |  in |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_done           | out |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_continue       |  in |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|start_out         | out |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|start_write       | out |    1| ap_ctrl_hs | leaky_relu_me<ap_fixed,ap_fixed,LeakyReLU_config20>509 | return value |
+|data_V_V_dout     |  in |   32|   ap_fifo  |                        data_V_V                        |    pointer   |
+|data_V_V_empty_n  |  in |    1|   ap_fifo  |                        data_V_V                        |    pointer   |
+|data_V_V_read     | out |    1|   ap_fifo  |                        data_V_V                        |    pointer   |
+|res_V_V_din       | out |   32|   ap_fifo  |                         res_V_V                        |    pointer   |
+|res_V_V_full_n    |  in |    1|   ap_fifo  |                         res_V_V                        |    pointer   |
+|res_V_V_write     | out |    1|   ap_fifo  |                         res_V_V                        |    pointer   |
++------------------+-----+-----+------------+--------------------------------------------------------+--------------+
+

@@ -1,0 +1,83 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'myproject'" level="0">
+<item name = "Date">Wed Jul 27 22:58:08 2022
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">myproject_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 7.162 ns, 0.62 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">7788159, 7861645, 55.782 ms, 56.308 ms, 176450, 4123601, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config48_s_fu_812">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config48_s, 1100, 133800, 7.879 us, 0.958 ms, 1100, 133800, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config7_s_fu_863">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config7_s, 47916, 2648448, 0.343 ms, 18.969 ms, 47916, 2648448, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config12_s_fu_913">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config12_s, 12716, 702848, 91.077 us, 5.034 ms, 12716, 702848, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config17_s_fu_963">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config17_s, 3564, 196992, 25.527 us, 1.411 ms, 3564, 196992, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config22_s_fu_1013">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config22_s, 1100, 60800, 7.879 us, 0.435 ms, 1100, 60800, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config44_s_fu_1063">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config44_s, 1100, 60800, 7.879 us, 0.435 ms, 1100, 60800, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config27_s_fu_1113">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config27_s, 396, 21888, 2.836 us, 0.157 ms, 396, 21888, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config31_s_fu_1163">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config31_s, 396, 21888, 2.836 us, 0.157 ms, 396, 21888, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config35_s_fu_1213">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config35_s, 396, 21888, 2.836 us, 0.157 ms, 396, 21888, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config39_s_fu_1263">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config39_s, 396, 21888, 2.836 us, 0.157 ms, 396, 21888, none</column>
+<column name="grp_conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config2_s_fu_1313">conv_2d_cl_me_ap_fixed_ap_fixed_32_16_5_3_0_config2_s, 101400, 4123600, 0.726 ms, 29.535 ms, 101400, 4123600, none</column>
+<column name="grp_pooling2d_large_cl_nopad_pad_me_ap_fixed_ap_fixed_config6_s_fu_1343">pooling2d_large_cl_nopad_pad_me_ap_fixed_ap_fixed_config6_s, 176449, 176449, 1.264 ms, 1.264 ms, 176449, 176449, none</column>
+<column name="grp_pooling2d_large_cl_nopad_pad_me_3_fu_1349">pooling2d_large_cl_nopad_pad_me_3, 44193, 44193, 0.317 ms, 0.317 ms, 44193, 44193, none</column>
+<column name="grp_pooling2d_large_cl_nopad_pad_me_2_fu_1355">pooling2d_large_cl_nopad_pad_me_2, 11089, 11089, 79.424 us, 79.424 us, 11089, 11089, none</column>
+<column name="grp_pooling2d_large_cl_nopad_pad_me_1_fu_1361">pooling2d_large_cl_nopad_pad_me_1, 2793, 2793, 20.005 us, 20.005 us, 2793, 2793, none</column>
+<column name="grp_pooling2d_large_cl_nopad_pad_me_fu_1367">pooling2d_large_cl_nopad_pad_me, 709, 709, 5.078 us, 5.078 us, 709, 709, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config5_506_fu_1373">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config5_506, 131080, 131080, 0.939 ms, 0.939 ms, 131080, 131080, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config10_507_fu_1379">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config10_507, 32776, 32776, 0.235 ms, 0.235 ms, 32776, 32776, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config15_508_fu_1385">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config15_508, 8200, 8200, 58.732 us, 58.732 us, 8200, 8200, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config20_509_fu_1391">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config20_509, 2056, 2056, 14.726 us, 14.726 us, 2056, 2056, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config25_510_fu_1397">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config25_510, 520, 520, 3.724 us, 3.724 us, 520, 520, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config47_515_fu_1403">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config47_515, 520, 520, 3.724 us, 3.724 us, 520, 520, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config30_511_fu_1409">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config30_511, 136, 136, 0.974 us, 0.974 us, 136, 136, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config34_512_fu_1415">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config34_512, 136, 136, 0.974 us, 0.974 us, 136, 136, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config38_513_fu_1421">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config38_513, 136, 136, 0.974 us, 0.974 us, 136, 136, none</column>
+<column name="grp_leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config42_514_fu_1427">leaky_relu_me_ap_fixed_ap_fixed_LeakyReLU_config42_514, 136, 136, 0.974 us, 0.974 us, 136, 136, none</column>
+<column name="grp_resize_nearest_me_ap_fixed_32_16_5_3_0_config43_s_fu_1433">resize_nearest_me_ap_fixed_32_16_5_3_0_config43_s, 514, 514, 3.681 us, 3.681 us, 514, 514, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config50_s_fu_1439">zeropad2d_cl_me_ap_fixed_ap_fixed_config50_s, 50703, 50703, 0.363 ms, 0.363 ms, 50703, 50703, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config51_s_fu_1446">zeropad2d_cl_me_ap_fixed_ap_fixed_config51_s, 34851, 34851, 0.250 ms, 0.250 ms, 34851, 34851, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config52_s_fu_1452">zeropad2d_cl_me_ap_fixed_ap_fixed_config52_s, 9251, 9251, 66.259 us, 66.259 us, 9251, 9251, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config53_s_fu_1458">zeropad2d_cl_me_ap_fixed_ap_fixed_config53_s, 2595, 2595, 18.586 us, 18.586 us, 2595, 2595, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config54_s_fu_1464">zeropad2d_cl_me_ap_fixed_ap_fixed_config54_s, 803, 803, 5.751 us, 5.751 us, 803, 803, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config59_s_fu_1470">zeropad2d_cl_me_ap_fixed_ap_fixed_config59_s, 803, 803, 5.751 us, 5.751 us, 803, 803, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config60_s_fu_1476">zeropad2d_cl_me_ap_fixed_ap_fixed_config60_s, 803, 803, 5.751 us, 5.751 us, 803, 803, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config55_s_fu_1482">zeropad2d_cl_me_ap_fixed_ap_fixed_config55_s, 291, 291, 2.084 us, 2.084 us, 291, 291, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config56_s_fu_1488">zeropad2d_cl_me_ap_fixed_ap_fixed_config56_s, 291, 291, 2.084 us, 2.084 us, 291, 291, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config57_s_fu_1494">zeropad2d_cl_me_ap_fixed_ap_fixed_config57_s, 291, 291, 2.084 us, 2.084 us, 291, 291, none</column>
+<column name="grp_zeropad2d_cl_me_ap_fixed_ap_fixed_config58_s_fu_1500">zeropad2d_cl_me_ap_fixed_ap_fixed_config58_s, 291, 291, 2.084 us, 2.084 us, 291, 291, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

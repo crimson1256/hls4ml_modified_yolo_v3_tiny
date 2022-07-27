@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /home/hisky/YOLO_head_detection/hls_model_yolo/hls4ml_prj_pynq_ss_filter8_128_delconcat_singleout_poolopt_0726/myproject_prj/solution1/.autopilot/db/a.g.bc ${1+"$@"}

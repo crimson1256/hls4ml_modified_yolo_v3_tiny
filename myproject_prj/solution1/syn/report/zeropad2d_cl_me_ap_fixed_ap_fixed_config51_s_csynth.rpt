@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vivado HLS Report for 'zeropad2d_cl_me_ap_fixed_ap_fixed_config51_s'
+================================================================
+* Date:           Wed Jul 27 22:58:15 2022
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        myproject_prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.375 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    34851|    34851| 0.174 ms | 0.174 ms |  34851|  34851|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- PadTopWidth     |      528|      528|         8|          -|          -|    66|    no    |
+        |- PadMain         |    33792|    33792|       528|          -|          -|    64|    no    |
+        | + CopyMain       |      512|      512|         8|          -|          -|    64|    no    |
+        |- PadBottomWidth  |      528|      528|         8|          -|          -|    66|    no    |
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    116|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    268|    -|
+|Register         |        -|      -|      98|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      98|    384|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |i_fu_133_p2           |     +    |      0|  0|  15|           7|           1|
+    |j_19_fu_157_p2        |     +    |      0|  0|  15|           7|           1|
+    |j_20_fu_145_p2        |     +    |      0|  0|  15|           7|           1|
+    |j_fu_121_p2           |     +    |      0|  0|  15|           7|           1|
+    |ap_block_state10      |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state2       |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state33      |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln112_fu_115_p2  |   icmp   |      0|  0|  11|           7|           7|
+    |icmp_ln117_fu_127_p2  |   icmp   |      0|  0|  11|           7|           8|
+    |icmp_ln121_fu_139_p2  |   icmp   |      0|  0|  11|           7|           8|
+    |icmp_ln130_fu_151_p2  |   icmp   |      0|  0|  11|           7|           7|
+    |ap_block_state1       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state18      |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state19      |    or    |      0|  0|   2|           1|           1|
+    +----------------------+----------+-------+---+----+------------+------------+
+    |Total                 |          |      0|  0| 116|          62|          40|
+    +----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------+-----+-----------+-----+-----------+
+    |      Name      | LUT | Input Size| Bits| Total Bits|
+    +----------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm       |  181|         41|    1|         41|
+    |ap_done         |    9|          2|    1|          2|
+    |data_V_V_blk_n  |    9|          2|    1|          2|
+    |i1_0_reg_82     |    9|          2|    7|         14|
+    |j3_0_reg_93     |    9|          2|    7|         14|
+    |j6_0_reg_104    |    9|          2|    7|         14|
+    |j_0_reg_71      |    9|          2|    7|         14|
+    |real_start      |    9|          2|    1|          2|
+    |res_V_V_blk_n   |    9|          2|    1|          2|
+    |res_V_V_din     |   15|          3|   32|         96|
+    +----------------+-----+-----------+-----+-----------+
+    |Total           |  268|         60|   65|        201|
+    +----------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------+----+----+-----+-----------+
+    |      Name      | FF | LUT| Bits| Const Bits|
+    +----------------+----+----+-----+-----------+
+    |ap_CS_fsm       |  40|   0|   40|          0|
+    |ap_done_reg     |   1|   0|    1|          0|
+    |i1_0_reg_82     |   7|   0|    7|          0|
+    |i_reg_174       |   7|   0|    7|          0|
+    |j3_0_reg_93     |   7|   0|    7|          0|
+    |j6_0_reg_104    |   7|   0|    7|          0|
+    |j_0_reg_71      |   7|   0|    7|          0|
+    |j_19_reg_190    |   7|   0|    7|          0|
+    |j_20_reg_182    |   7|   0|    7|          0|
+    |j_reg_166       |   7|   0|    7|          0|
+    |start_once_reg  |   1|   0|    1|          0|
+    +----------------+----+----+-----+-----------+
+    |Total           |  98|   0|   98|          0|
+    +----------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+---------------------------------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |                Source Object                |    C Type    |
++------------------+-----+-----+------------+---------------------------------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|start_full_n      |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_done           | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_continue       |  in |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|start_out         | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|start_write       | out |    1| ap_ctrl_hs | zeropad2d_cl_me<ap_fixed,ap_fixed,config51> | return value |
+|data_V_V_dout     |  in |   32|   ap_fifo  |                   data_V_V                  |    pointer   |
+|data_V_V_empty_n  |  in |    1|   ap_fifo  |                   data_V_V                  |    pointer   |
+|data_V_V_read     | out |    1|   ap_fifo  |                   data_V_V                  |    pointer   |
+|res_V_V_din       | out |   32|   ap_fifo  |                   res_V_V                   |    pointer   |
+|res_V_V_full_n    |  in |    1|   ap_fifo  |                   res_V_V                   |    pointer   |
+|res_V_V_write     | out |    1|   ap_fifo  |                   res_V_V                   |    pointer   |
++------------------+-----+-----+------------+---------------------------------------------+--------------+
+
